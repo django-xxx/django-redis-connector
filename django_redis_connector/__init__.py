@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
 
-from django_response.djresponse import response
+from django_redis_connector.redis_connector import connector, redis_connect

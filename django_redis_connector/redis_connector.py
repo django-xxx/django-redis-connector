@@ -7,7 +7,7 @@ def redis_conf(conf):
     return {
         'host': conf.get('HOST', 'localhost'),
         'port': conf.get('PORT', 6379),
-        'password': '{}:{}'.format(conf.get('USER', ''), conf.get('PASSWORD', '')) if conf.get('USER') else '',
+        'password': '{}:{}'.format(conf.get('USER', ''), conf.get('PASSWORD', '')) if conf.get('USER') else conf.get('PASSWORD', ''),
         'db': conf.get('db', 0),
         'decode_responses': conf.get('decode_responses', False),
     }
